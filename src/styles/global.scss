@@ -1,0 +1,43 @@
+@import './variables.scss';
+
+body {
+  font-family: $font-style;
+
+  .container {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 76px;
+    line-height: 76px;
+    font-family: 'Oswald';
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+}
+
+.swiper-button-prev {
+  background-color: $primary-black;
+  color: $primary-white !important;
+  &::after {
+    content: 'prev';
+    font-size: 12px !important;
+  }
+}
+
+.swiper-button-next {
+  background-color: $primary-black;
+  color: $primary-white !important;
+  &::after {
+    content: 'next';
+    font-size: 12px !important;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.header {
+  background-color: $primary-black;
+  &__container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 36px 8px 36px;
+    align-items: center;
+    max-width: 1440px;
+
+    &__right {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+}

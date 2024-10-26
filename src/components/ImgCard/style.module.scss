@@ -1,0 +1,29 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__detail {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    h4 {
+      text-align: center;
+      font-family: 'PP Acma';
+      font-size: 35px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    button {
+      background-color: $primary-white;
+      color: $primary-black;
+      border: 1px solid $primary-black;
+      padding: 8px;
+    }
+  }
+}

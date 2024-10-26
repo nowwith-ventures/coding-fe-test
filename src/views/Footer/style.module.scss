@@ -1,0 +1,61 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: $primary-black;
+  padding: 64px;
+  &__container {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      display: flex;
+      gap: 48px;
+      flex-direction: column;
+
+      &__category {
+        display: flex;
+        gap: 80px;
+
+        &__sub {
+          color: $primary-white;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        span {
+          display: block;
+          color: $primary-grey;
+          font-size: 14px;
+          margin-bottom: 8px;
+        }
+      }
+
+      &__copy {
+        color: $primary-white;
+        font-weight: 400;
+        font-size: 11px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      &__icons {
+        display: flex;
+        gap: 8px;
+      }
+
+      &__terms {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        p {
+          color: $primary-white;
+        }
+      }
+    }
+  }
+}
