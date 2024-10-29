@@ -1,6 +1,16 @@
 @import './variables.scss';
 
 body {
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   font-family: $font-style;
 
   .container {
@@ -27,6 +37,15 @@ body {
 .swiper-button-prev {
   background-color: $primary-black;
   color: $primary-white !important;
+  left: -55px !important;
+  width: 40px !important;
+  top: 30% !important;
+  border-radius: 5px;
+
+  @media screen and (max-width: 1024px) {
+    left: -30px !important;
+  }
+
   &::after {
     content: 'prev';
     font-size: 12px !important;
@@ -36,6 +55,15 @@ body {
 .swiper-button-next {
   background-color: $primary-black;
   color: $primary-white !important;
+  right: -55px !important;
+  width: 40px !important;
+  top: 30% !important;
+  border-radius: 5px;
+
+  @media screen and (max-width: 1024px) {
+    right: -30px !important;
+  }
+
   &::after {
     content: 'next';
     font-size: 12px !important;

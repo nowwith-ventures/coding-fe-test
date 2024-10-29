@@ -6,11 +6,13 @@ import menu from '@/assets/icons/menu.svg'
 import bag from '@/assets/icons/bag.svg'
 import heart from '@/assets/icons/heart.svg'
 import faveHeart from '@/assets/icons/faveHeart.svg'
-import getPaid from '@/assets/icons/getPaid.png'
+import getPaid from '@/assets/icons/getPaid.svg'
 import linkedin from '@/assets/icons/linkedin.svg'
 import facebook from '@/assets/icons/fb.png'
 import x from '@/assets/icons/x.png'
 import youtube from '@/assets/icons/youtube.png'
+import updown from '@/assets/icons/updown.svg'
+import cheveron from '@/assets/icons/cheveron.svg'
 
 const iconMap = {
   logo,
@@ -23,6 +25,8 @@ const iconMap = {
   facebook,
   x,
   youtube,
+  updown,
+  cheveron,
 }
 
 type IconName = keyof typeof iconMap
@@ -51,7 +55,9 @@ export const Icon: React.FC<Props> = ({
     <Image
       src={iconSrc}
       alt={`${name} icon`}
+      //@ts-ignore
       width={width}
+      //@ts-ignore
       height={height}
       className={className}
     />

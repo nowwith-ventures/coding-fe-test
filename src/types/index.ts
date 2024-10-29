@@ -79,6 +79,7 @@ export type Locale = {
   variants: Variant[]
   createdAt: string
   updatedAt: string
+  brand?: string
 }
 
 export type Category = {
@@ -138,4 +139,19 @@ export type ApiData = {
   priceRange: PriceRange
   products: Product[]
   merchants: Merchant[]
+  users: User[]
+}
+
+export type User = {
+  backgroundImage: string
+  createdAt: string
+  description: string
+  firstName: string
+  id: string
+  lastName: string
+  profileImage: string
+  shopKey: string
+  shopName: string
+  updatedAt: string
+  userType: string
 }

@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  max-width: 1440px;
+  margin: auto;
+
+  &__container {
+    display: flex;
+
+    &__facet_wrapper {
+      width: 25%;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &__list_wrapper {
+      padding-left: 32px;
+      width: 75%;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h6 {
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: -5px;
+    font-style: 'PP Acma';
+    margin: 16px 0;
+  }
+
+  p {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  &__button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}

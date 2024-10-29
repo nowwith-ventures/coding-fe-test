@@ -3,7 +3,7 @@
 .banner {
   background-color: $primary-black;
   color: $primary-white;
-  background-image: url('../../assets/icons/getPaid.png');
+  background-image: url('../../assets/icons/getPaid.svg');
   padding: 8px 0;
 
   &__container {
@@ -12,6 +12,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+
     h4 {
       font-family: 'Oswald';
       font-size: 56px;

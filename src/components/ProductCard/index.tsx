@@ -1,34 +1,66 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import s from './style.module.scss'
 
-import productImg from '@/assets/img/product1.png'
+import { Button } from '../Button'
 import { Icon } from '../Icon'
+import { Option } from '@/types'
 
-export const ProductCard = () => {
+interface Props {
+  src: string | StaticImageData
+  title: string
+  price: number | string
+  options: Option[]
+  description: string
+  fromTrending?: boolean
+  commisionRate?: number
+  badges: string[]
+}
+
+export const ProductCard = ({
+  src,
+  title,
+  price,
+  options,
+  description,
+  fromTrending = false,
+  commisionRate,
+  badges,
+}: Props) => {
+  const isSameDayPay = badges?.includes('same-day-pay')
+
   return (
-    <div className={s.card}>
+    <div className={fromTrending ? s.card_trending : s.card}>
       <div className={s.card__wrapper}>
-        <div className={s.card__wrapper__commission}>15% Commission</div>
+        <div className={s.card__wrapper__commission}>
+          {commisionRate}% Commission
+        </div>
         <div className={s.card__wrapper__like}>
           <Icon name="faveHeart" />
         </div>
-        <div className={s.card__wrapper__get_paid}>
-          <Icon name="getPaid" width={50} height={50} />
+        {isSameDayPay && (
+          <div className={s.card__wrapper__get_paid}>
+            <Icon name="getPaid" width={50} height={50} />
+          </div>
+        )}
+        <div className={s.card__wrapper__img_wrapper}>
+          <Image src={src} alt="product_image" width={260} height={260} />
         </div>
-        <Image src={productImg} alt="product_image" />
       </div>
       <div className={s.card__details}>
         <div className={s.card__details__merchant}>
-          <Icon name="getPaid" width={30} height={30} />
-          <h6>Christian Dior</h6>
+          <h6>{title}</h6>
         </div>
         <div>
-          <p>Addict Lip low Oil</p>
-          <p>7 Options</p>
+          <p className={s.card__details__description}>{description}</p>
+          <p>{options.length} Options</p>
           <p>
-            <strong>$36</strong>
+            <strong>${price}</strong>
           </p>
         </div>
+      </div>
+      <div className={s.card__button_wrap}>
+        <Button type="primary">Add to Shelf</Button>
+        <Button type="secondary">Add to Bag</Button>
       </div>
     </div>
   )

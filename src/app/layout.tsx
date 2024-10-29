@@ -1,4 +1,6 @@
 import '@/styles/global.scss'
+
+import { Providers } from '@/Providers/queryProvider'
 import { Footer, Header } from '@/views'
 
 export const metadata = {
@@ -15,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>

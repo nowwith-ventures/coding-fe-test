@@ -12,7 +12,7 @@ export const ImageGroup: React.FC<Props> = ({ srcs, imgNums }) => {
   return (
     <div className={s.wrapper}>
       {srcs.map((src, index) => (
-        <div className={imageWrapperClass}>
+        <div className={imageWrapperClass} key={index}>
           <Image src={src} alt={`${index}_image`} />
         </div>
       ))}

@@ -1,15 +1,26 @@
-import { SearchBar, Breadcrumbs, ImageGroup } from '@/components'
-import { Banner, TrendingProducts } from '@/views'
+import {
+  dehydrate,
+  HydrationBoundary,
+  QueryClient,
+} from '@tanstack/react-query'
+import { SearchBar, Breadcrumbs } from '@/components'
+import { Landing, ProductListing } from '@/views'
+import { getProducts } from '@/services'
 
-import img1 from '@/assets/img/kylie.png'
-import img2 from '@/assets/img/pink.png'
-import img3 from '@/assets/img/fenty.png'
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+  const queryClient = new QueryClient()
+  const params = await searchParams
+  await queryClient.prefetchQuery({
+    queryKey: ['products', params.query],
+    queryFn: () => getProducts(params?.query as string),
+  })
 
-const IMG_ARR = [img1, img2, img3]
-
-export default function Home() {
   return (
-    <div>
+    <>
       <SearchBar />
       <div className="container">
         <Breadcrumbs
@@ -18,10 +29,14 @@ export default function Home() {
             { label: 'Marketplace', value: 'Marketplace', href: '#' },
           ]}
         />
-        <ImageGroup srcs={IMG_ARR} imgNums={3} />
-        <TrendingProducts />
       </div>
-      <Banner />
-    </div>
+      {params?.categories || params?.query !== undefined ? (
+        <HydrationBoundary state={dehydrate(queryClient)}>
+          <ProductListing />
+        </HydrationBoundary>
+      ) : (
+        <Landing />
+      )}
+    </>
   )
 }
