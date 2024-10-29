@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.button_primary {
+  background-color: $primary-white;
+  color: $primary-black;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 26px;
+  border: 1px solid $primary-grey;
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  min-width: 127px;
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.button_secondary {
+  color: $primary-white;
+  background-color: $primary-black;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 26px;
+  border: 1px solid $primary-grey;
+  border-radius: 4px;
+  padding: 8px;
+  min-width: 127px;
+
+  :hover {
+    cursor: pointer;
+  }
+}

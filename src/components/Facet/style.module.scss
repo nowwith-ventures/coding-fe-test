@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.facet {
+  border-top: 2px solid $light-grey;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 4px;
+    align-items: center;
+    label {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    &__icon {
+      :hover {
+        cursor: pointer;
+      }
+      &__minus {
+        width: 15px;
+        background-color: $light-grey;
+        height: 2px;
+        position: relative;
+
+        &__plus {
+          position: absolute;
+          height: 15px;
+          width: 2px;
+          left: 7px;
+          bottom: -7px;
+          background-color: $light-grey;
+        }
+      }
+    }
+  }
+
+  &__content {
+    padding: 0 16px;
+
+    &__button_wrapper {
+      margin-bottom: 16px;
+      margin-top: 16px;
+    }
+  }
+}

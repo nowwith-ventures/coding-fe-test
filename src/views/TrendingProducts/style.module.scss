@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  margin-top: 32px;
+  margin-bottom: 64px;
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+  }
+}

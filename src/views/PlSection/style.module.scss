@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  margin-bottom: 32px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    label {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 15px;
+      font-weight: 600;
+    }
+  }
+  &__content {
+    padding: 16px 48px;
+
+    img {
+      width: 260px;
+      height: 260px;
+      border-radius: 12px;
+    }
+  }
+}
