@@ -1,0 +1,48 @@
+@import '@/styles/variables';
+
+.shopAndShare {
+  background-color: #000;
+  background-image: url('/imgs/shop-and-share/get-paid.png');
+  background-repeat: repeat;
+  background-size: 5.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 0.75rem;
+  gap: 1.25rem;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 2.125rem 5.125rem;
+    flex-direction: row;
+  }
+
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 5vw, 2.8125rem);
+    line-height: 3.75rem;
+    text-align: center;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  span {
+    color: #fff;
+  }
+}

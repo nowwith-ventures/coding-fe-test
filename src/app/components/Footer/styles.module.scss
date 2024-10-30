@@ -1,0 +1,95 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 5rem 5.5rem;
+
+  ul {
+    list-style: none;
+  }
+
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: flex-end;
+  }
+
+  a {
+    color: currentcolor;
+    text-decoration: none;
+  }
+}
+
+.footerNav {
+  display: flex;
+}
+
+.footerNavContainer,
+.socialNav {
+  width: 50%;
+}
+
+.footerNavContainer > a {
+  display: block;
+  padding-bottom: 2.5rem;
+}
+
+.socialNav {
+  justify-content: flex-end;
+}
+
+.footerNavContainer {
+  width: 50%;
+}
+
+.siteNav {
+  padding-bottom: 3.625rem;
+
+  h2 {
+    padding-bottom: 0.625rem;
+
+    // TODO: Replace with variable
+    line-height: 1.25rem;
+    font-size: 1rem;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+  }
+
+  & > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.siteList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+
+  // TODO: Replace with variable
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+.legal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // TODO: Replace with variable
+  font-size: 0.6875rem;
+  line-height: 0.75rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+.legalNav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+}

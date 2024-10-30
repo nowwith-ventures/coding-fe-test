@@ -1,0 +1,83 @@
+@import '@/styles/variables';
+
+.productList {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.productItem {
+  padding: 1rem;
+  box-sizing: border-box;
+  flex: 1 1 calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 4px;
+  font-family: Montserrat, sans-serif;
+
+  @media (min-width: $breakpoint-md) {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: 33.33%;
+  }
+
+  .productImage {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+  }
+
+  .productBrand {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .productTitle {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .productOptions {
+    flex-grow: 1;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  .productPrice {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  .productButtons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+
+    .addToShelf {
+      flex: 1;
+      padding: 0.5rem;
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+
+    .addToBag {
+      flex: 1;
+      padding: 0.5rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

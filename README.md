@@ -87,3 +87,19 @@ Once you have completed the assignment:
 
 - **Can I leverage and import useful modules as necessary?**  
   Yes, you can use utility modules like Day.js and Lodash. However, avoid using major UI libraries like Material-UI.
+
+## Thoughts & Feedback
+
+- The meat and potatoes of the build was centered around the API call. Though I did first try and knock out some of the other more style heavy items. Because of time I dropped carousels and callouts and focused more on larger sweeps of the project.
+
+- I wanted to add some accessibility into the project, keep a focus on the bigger ideas of the assignment like the API, filtering, and grid displays.
+
+- I tried to timebox this to ~4 hours.
+
+- I didn't get into check alternate ways to get data from the API. I was initially thinking the facet list could be called/searched by category, though because of my time I figured that would be beyond MVP. I also opted to focus more on the filtering over the design on the product search. There would be definitely things I would do differently in a real world scenario.
+
+- Got stuck on implementing images from the api - found a cool work around there.
+
+- Spent a little time on setting up stylelint and adding storybook, though it didn't really save me time in the short run.
+
+- Challenge was pretty large, I felt I ran out of time trying to dial in assets and such. I didn't implement fonts and all the styles how I would want, and spent time on things like footer/header that probably could have been just included within the project. As I kept looking at the clock, I felt I was rushing more than I would normally on a project.

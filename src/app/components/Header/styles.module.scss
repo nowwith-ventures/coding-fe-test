@@ -1,0 +1,26 @@
+@import '@/styles/variables';
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.mainNav {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 3.875rem;
+  justify-content: space-between;
+  padding-inline: 0.75rem;
+
+  a {
+    color: currentcolor;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    padding: 1.25rem 2.5rem;
+  }
+}

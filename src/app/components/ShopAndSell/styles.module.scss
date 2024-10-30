@@ -1,0 +1,13 @@
+.shopAndSell {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  img {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

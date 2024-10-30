@@ -1,0 +1,40 @@
+.search {
+  background: #000;
+  width: 100%;
+
+  form {
+    display: flex;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    height: 2.875rem;
+
+    div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      input {
+        width: 100%;
+        padding: 0 15px 0 30px;
+        text-align: center;
+        border-radius: 110px;
+        border: 1px solid #fff;
+        color: #000;
+        font-size: 14px;
+        outline: none;
+        font-weight: 600;
+        background: no-repeat scroll 120px 10px #fff;
+        transition: background-color 0.3s ease;
+        height: 100%;
+
+        &:focus {
+          text-align: left;
+          padding-left: 70px;
+          background-position: 30px 10px;
+        }
+      }
+    }
+  }
+}
